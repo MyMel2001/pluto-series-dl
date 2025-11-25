@@ -2,17 +2,21 @@
 
 **A simple Python script to download entire TV series from Pluto TV using Streamlink.**
 
-This script lets you input any Pluto TV on-demand series URL (e.g., `https://pluto.tv/on-demand/series/the-twilight-zone`), scrapes all seasons and episodes using Playwright (handles dropdowns, tabs, and lazy loading), and downloads each episode with Streamlink. No tokens, no APIs—just pure scraping and streaming.
+## Disclaimer
+For personal archiving only. Respect Pluto TV's TOS — content is ad-supported and not for redistribution.
+
+## About
+
+This script lets you input any Pluto TV on-demand series URL (e.g., `https://pluto.tv/on-demand/series/the-twilight-zone`), scrapes all seasons and episodes using Playwright (handles dropdowns, tabs, and lazy loading), and downloads each episode with Streamlink. No tokens, no APIs — just pure scraping and streaming.
 
 Works as of November 2025 for multi-season shows like *The Twilight Zone* (156 episodes across 5 seasons), *Jeopardy!*, *South Park*, *Star Trek*, etc. Episodes are saved as `.ts` files (MPEG-TS with embedded ads; post-process with FFmpeg if needed).
 
 ## Features
-- **User-Friendly**: Just paste a series URL when prompted—no manual config.
+- **User-Friendly**: Just paste a series URL when prompted — no manual config.
 - **Multi-Season Support**: Automatically detects and loops through season dropdowns, tabs, or elements with the "select" tag.
 - **Robust Scraping**: Uses Playwright to handle JavaScript-heavy pages, lazy loading, and dynamic content.
 - **Streamlink Integration**: Downloads high-quality HLS streams (best quality, retries on failure).
 - **Customizable**: Limits per season, headless mode, delay between downloads.
-- **Legal Note**: For personal archiving only. Respect Pluto TV's TOS—content is ad-supported and not for redistribution.
 
 ## Prerequisites
 1. Python 3.8+ (tested on 3.12).
@@ -76,6 +80,5 @@ MIT License — free to use/modify for personal use.
 
 ## Credits
 - Built with Playwright for scraping & Streamlink for downloads.
-- Inspired by community tools like yt-dlp Pluto plugins.
-
-Questions? Open an issue or tweak the script - it's simple Python!
+- Inspired by community tools.
+- Vibe coded with Grok.
