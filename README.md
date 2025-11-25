@@ -8,7 +8,7 @@ Works as of November 2025 for multi-season shows like *The Twilight Zone* (156 e
 
 ## Features
 - **User-Friendly**: Just paste a series URL when prompted—no manual config.
-- **Multi-Season Support**: Automatically detects and loops through season dropdowns, tabs, or <select> elements.
+- **Multi-Season Support**: Automatically detects and loops through season dropdowns, tabs, or elements with the "select" tag.
 - **Robust Scraping**: Uses Playwright to handle JavaScript-heavy pages, lazy loading, and dynamic content.
 - **Streamlink Integration**: Downloads high-quality HLS streams (best quality, retries on failure).
 - **Customizable**: Limits per season, headless mode, delay between downloads.
