@@ -53,15 +53,6 @@ Edit these in the script:
 - `MAX_PER_SEASON`: Limit episodes per season (default: None = all; set to 5 for testing).
 - `HEADLESS = False`: Watch the browser scrape (debug mode).
 
-### Post-Processing (Optional)
-- **Remove Ads/Convert**: Use FFmpeg to skip silent ad segments and convert to MP4:
-```bash
-for f in pluto_downloads/*.ts; do
-ffmpeg -i "$f" -vf blackframe=amount=99:threshold=0.1 -af silencedetect=noise=-30dB:d=0.5 -c:v copy -c:a aac "${f%.ts}.mp4"
-done
-```
-- This detects and cuts ads based on black frames/silence (tune parameters for Pluto's ads).
-
 ## Troubleshooting
 - **No Episodes Found?**: Set `HEADLESS=False` to watch; check for geo-blocks (use VPN for US content).
 - **Streamlink Fails**: Ensure installed (`pip show streamlink`); test single episode: `streamlink [URL] best -o test.ts`.
